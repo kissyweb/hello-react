@@ -1,26 +1,66 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Header from './Header.js'
+import { Route, Link } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class Home extends Component {
+  render() {
+    return (
+      <div>
+        <h1>홈 페이지</h1>
+      </div>
+    )
+  }
 }
 
-export default App;
+export class First extends Component {
+  render() {
+    return (
+      <div>
+        <h2>1, 첫번째 페이지</h2>
+      </div>
+    )
+  }
+}
+
+export class Second extends Component {
+  render() {
+    return (
+      <div>
+        <h3>2, 두번째 페이지</h3>
+      </div>
+    )
+  }
+}
+
+export class Third extends Component {
+  render() {
+    return (
+      <div>
+        <Link to={`${this.props.match.url}/1`} style={{ marginRight: '5px' }}>
+          1번
+        </Link>
+        <Link to={`${this.props.match.url}/2`}>2번</Link>
+        <Route
+          exact
+          path={this.props.match.url}
+          render={() => (
+            <div>
+              <h3>id를 선택해 주세요.</h3>
+            </div>
+          )}
+        />
+        <Route path={`${this.props.match.url}/:id`} component={Item} />
+      </div>
+    )
+  }
+}
+
+class Item extends Component {
+  render() {
+    return (
+      <div>
+        <h3>{this.props.match.params.id}</h3>
+      </div>
+    )
+  }
+}
