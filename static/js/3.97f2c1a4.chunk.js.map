@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/About.js"],"names":["About"],"mappings":"iHAAA,2BAMeA,UAJD,WACV,OAAO","file":"static/js/3.97f2c1a4.chunk.js","sourcesContent":["import React from 'react';\r\n\r\nconst About = () => {\r\n    return <div>About</div>\r\n}\r\n\r\nexport default About;"],"sourceRoot":""}

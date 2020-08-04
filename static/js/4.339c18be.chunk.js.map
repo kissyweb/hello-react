@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/Home.js"],"names":["Home"],"mappings":"iHAAA,2BAMeA,UAJF,WACT,OAAO","file":"static/js/4.339c18be.chunk.js","sourcesContent":["import React from 'react';\r\n\r\nconst Home = () => {\r\n    return <div>Home</div>\r\n}\r\n\r\nexport default Home;"],"sourceRoot":""}

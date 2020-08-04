@@ -1,0 +1,2 @@
+(this["webpackJsonphello-react"]=this["webpackJsonphello-react"]||[]).push([[4],{32:function(e,t,n){"use strict";n.r(t);var a=n(0),c=n.n(a);t.default=function(){return c.a.createElement("div",null,"Home")}}}]);
+//# sourceMappingURL=4.339c18be.chunk.js.map
